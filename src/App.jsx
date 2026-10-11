@@ -5,9 +5,11 @@ import {
   Check,
   ChevronDown,
   ExternalLink,
+  FileText,
   LineChart,
   Mail,
   Search,
+  ShieldCheck,
   Sparkles,
   Target,
   Zap,
@@ -214,9 +216,252 @@ const faqSections = [
   },
 ];
 
+const legalDocs = {
+  privacy: {
+    icon: ShieldCheck,
+    eyebrow: "Privacy Notice",
+    title: "SipSmart AI Privacy Notice",
+    date: "Effective Date: October 10, 2026",
+    intro:
+      "This Privacy Notice explains how SipSmart AI collects, uses, shares, and protects information when you use our website, mobile app, support center, and related services.",
+    summary: [
+      "SipSmart AI uses photos and entries you choose to submit to help identify drinks and maintain your diary.",
+      "AI drink recognition and quantity estimates may be incomplete or inaccurate, so you should review entries before saving.",
+      "Purchases and subscriptions are handled by third-party app stores, such as Apple or Google, under their own payment terms.",
+      "Replace the contact and company details on this page with your final legal information before publishing.",
+    ],
+    sections: [
+      {
+        id: "information-we-collect",
+        title: "1. Information We Collect",
+        paragraphs: [
+          "We may collect information you provide directly, information created when you use SipSmart AI, and limited information from third parties that support the service.",
+        ],
+        bullets: [
+          "Account and contact details, such as your name, email address, profile details, and support messages.",
+          "Drink and wellness entries, including photos of drinks or containers, beverage type, estimated volume, caffeine or alcohol-related labels, diary notes, daily fluid goals, reminders, streaks, and achievements.",
+          "Optional profile or preference information, such as communication settings, app preferences, and any goals you choose to provide.",
+          "Usage and device information, such as device type, browser type, operating system, IP address, app activity, crash data, and approximate location inferred from your device or network.",
+          "Subscription and purchase status from app stores or payment providers. We do not receive your full payment card number from Apple, Google, or similar platforms.",
+        ],
+      },
+      {
+        id: "photos-ai-and-sensitive-information",
+        title: "2. Photos, AI Estimates, and Sensitive Information",
+        paragraphs: [
+          "SipSmart AI is designed around photo-first logging. Photos, drink entries, supplement or nicotine labels, and related notes may reveal personal habits or information that some laws treat as sensitive. You control what you submit, and you should avoid uploading anything you do not want processed by the service.",
+          "AI identification and quantity estimates are automated approximations. SipSmart AI is a tracking tool, not a medical device, and it does not measure impairment, diagnose conditions, or determine your actual hydration status.",
+        ],
+      },
+      {
+        id: "how-we-use-information",
+        title: "3. How We Use Information",
+        paragraphs: [
+          "We use information to operate, maintain, personalize, and improve SipSmart AI. This includes creating drink diary entries, estimating drink details, displaying your brain buddy mode, calculating progress toward goals, sending reminders, providing insights, troubleshooting issues, preventing misuse, and responding to support requests.",
+          "We may also use aggregated, de-identified, or anonymized information for analytics, research, product development, and business reporting where permitted by law.",
+        ],
+      },
+      {
+        id: "cookies-and-analytics",
+        title: "4. Cookies and Analytics",
+        paragraphs: [
+          "Our website may use cookies, local storage, pixels, software development kits, and similar technologies to keep the site working, remember preferences, understand usage, improve performance, prevent fraud, and measure marketing or product activity.",
+          "You can usually control cookies through your browser settings. Blocking some cookies may affect certain website features.",
+        ],
+      },
+      {
+        id: "how-we-share-information",
+        title: "5. How We Share Information",
+        paragraphs: [
+          "We may share information with service providers and partners that help us host the website, operate the app, process support requests, analyze usage, send communications, provide security, manage subscriptions, and perform other services on our behalf.",
+          "We may also share information when required by law, to protect rights and safety, in connection with a merger, acquisition, financing, or sale of assets, or with your consent or direction.",
+        ],
+      },
+      {
+        id: "your-choices",
+        title: "6. Your Privacy Choices",
+        paragraphs: [
+          "Depending on where you live, you may have rights to request access to, correction of, deletion of, or portability of your personal information. You may also have rights to limit or object to certain processing, opt out of some targeted advertising, or appeal a decision about your request.",
+          "To make a privacy request, contact us at privacy@sipsmart.ai. We may need to verify your identity before fulfilling a request.",
+        ],
+      },
+      {
+        id: "retention-and-security",
+        title: "7. Retention and Security",
+        paragraphs: [
+          "We retain information for as long as reasonably necessary to provide the service, comply with legal obligations, resolve disputes, enforce agreements, maintain security, and operate our business.",
+          "We use reasonable technical, administrative, and organizational safeguards designed to protect information. No system can be guaranteed to be completely secure.",
+        ],
+      },
+      {
+        id: "children",
+        title: "8. Children",
+        paragraphs: [
+          "SipSmart AI is not intended for children under 13. If we learn that a child under 13 has provided personal information, we will take appropriate steps to delete it. Teens should use the service only with consent and supervision from a parent or legal guardian where required.",
+        ],
+      },
+      {
+        id: "international-transfers",
+        title: "9. International Transfers",
+        paragraphs: [
+          "SipSmart AI may process and store information in the United States and other countries where we or our service providers operate. These countries may have privacy laws that differ from those in your location.",
+        ],
+      },
+      {
+        id: "changes-contact",
+        title: "10. Changes and Contact",
+        paragraphs: [
+          "We may update this Privacy Notice from time to time. The updated version will be identified by a new effective date.",
+          "Questions about this notice can be sent to privacy@sipsmart.ai. Add your company legal name and mailing address here before publishing the final policy.",
+        ],
+      },
+    ],
+  },
+  terms: {
+    icon: FileText,
+    eyebrow: "Terms of Use",
+    title: "SipSmart AI Terms of Use",
+    date: "Last Updated: October 10, 2026",
+    intro:
+      "These Terms of Use describe the rules that apply when you access or use SipSmart AI, including the website, mobile app, AI-powered drink logging features, support center, and related services.",
+    summary: [
+      "SipSmart AI provides drink tracking and habit insights, not medical advice or impairment assessment.",
+      "You are responsible for reviewing AI estimates before saving entries.",
+      "Subscriptions and refunds are managed through the app store or payment platform where you purchased.",
+      "Have a qualified attorney review these terms before using them as your final legal agreement.",
+    ],
+    sections: [
+      {
+        id: "agreement",
+        title: "1. Agreement to These Terms",
+        paragraphs: [
+          "By accessing or using SipSmart AI, you agree to these Terms and our Privacy Notice. If you do not agree, do not use the service.",
+          "If you use SipSmart AI on behalf of a company or other organization, you represent that you have authority to bind that organization to these Terms.",
+        ],
+      },
+      {
+        id: "eligibility",
+        title: "2. Eligibility",
+        paragraphs: [
+          "You must be at least 13 years old to use SipSmart AI. If you are between 13 and 17, you may use the service only with consent and supervision from a parent or legal guardian, who is responsible for your use.",
+        ],
+      },
+      {
+        id: "service-description",
+        title: "3. The Service",
+        paragraphs: [
+          "SipSmart AI lets users log drinks and related wellness items, review AI-generated estimates, set goals and reminders, view diary entries and trends, and interact with an animated brain buddy experience.",
+          "Features may change over time. Some features may be experimental, unavailable in certain regions, or limited by app version, device, account status, or subscription plan.",
+        ],
+      },
+      {
+        id: "health-and-safety",
+        title: "4. Health and Safety Disclaimers",
+        paragraphs: [
+          "SipSmart AI does not provide medical, nutritional, mental health, substance-use, or safety advice. Information in the service is provided for general tracking and informational purposes only.",
+          "AI drink recognition, volume estimates, caffeine estimates, alcohol labels, supplement labels, hydration progress, streaks, and insights are approximations and may be incomplete or inaccurate. You should consult qualified professionals for medical, dietary, substance-use, or safety guidance.",
+          "SipSmart AI does not determine whether you are hydrated, sober, impaired, safe to drive, or safe to perform any activity.",
+        ],
+      },
+      {
+        id: "accounts",
+        title: "5. Accounts and Security",
+        paragraphs: [
+          "You are responsible for maintaining the confidentiality of your account credentials and for all activity under your account. Notify us promptly if you believe your account has been compromised.",
+        ],
+      },
+      {
+        id: "user-content",
+        title: "6. User Content",
+        paragraphs: [
+          "You may submit photos, diary entries, notes, preferences, goals, and other content to the service. You represent that you have the rights needed to submit that content and that your content does not violate law or the rights of others.",
+          "You grant SipSmart AI a non-exclusive, worldwide, royalty-free license to host, store, reproduce, process, analyze, display, and otherwise use your content as needed to operate, secure, support, and improve the service, including AI-powered features where permitted by law and your settings.",
+        ],
+      },
+      {
+        id: "acceptable-use",
+        title: "7. Acceptable Use",
+        paragraphs: ["You agree not to misuse SipSmart AI or help anyone else misuse it."],
+        bullets: [
+          "Do not upload unlawful, harmful, infringing, explicit, deceptive, or abusive content.",
+          "Do not upload photos of people or private property without any required consent.",
+          "Do not attempt to reverse engineer, scrape, copy, disrupt, or gain unauthorized access to the service.",
+          "Do not use SipSmart AI to make medical, legal, safety, impairment, or emergency decisions.",
+          "Do not use the service to violate applicable law or third-party rights.",
+        ],
+      },
+      {
+        id: "subscriptions",
+        title: "8. Subscriptions, Billing, and Refunds",
+        paragraphs: [
+          "Paid features, subscriptions, trials, renewals, cancellations, and refunds may be processed by third-party platforms such as the Apple App Store or Google Play Store. Their terms and policies govern payment processing, renewal timing, cancellation, and refunds.",
+          "Deleting the app does not necessarily cancel a subscription. Manage or cancel subscriptions through the platform where you purchased unless SipSmart AI provides another method.",
+        ],
+      },
+      {
+        id: "third-party-services",
+        title: "9. Third-Party Services",
+        paragraphs: [
+          "SipSmart AI may link to or integrate with third-party services. We do not control those services and are not responsible for their content, policies, or practices.",
+        ],
+      },
+      {
+        id: "intellectual-property",
+        title: "10. Intellectual Property",
+        paragraphs: [
+          "SipSmart AI, including its software, design, branding, content, AI features, and other materials, is owned by SipSmart AI or its licensors. Except as allowed by these Terms, you may not copy, modify, sell, distribute, or create derivative works from the service.",
+          "If you provide feedback or suggestions, you grant us the right to use them without restriction or compensation.",
+        ],
+      },
+      {
+        id: "termination",
+        title: "11. Suspension and Termination",
+        paragraphs: [
+          "We may suspend or terminate access to SipSmart AI if you violate these Terms, create risk for the service or others, or where required by law. You may stop using the service at any time.",
+        ],
+      },
+      {
+        id: "disclaimers",
+        title: "12. Disclaimers",
+        paragraphs: [
+          "SipSmart AI is provided on an AS IS and AS AVAILABLE basis. To the maximum extent permitted by law, we disclaim warranties of any kind, including warranties of accuracy, reliability, merchantability, fitness for a particular purpose, non-infringement, and uninterrupted operation.",
+        ],
+      },
+      {
+        id: "liability",
+        title: "13. Limitation of Liability",
+        paragraphs: [
+          "To the maximum extent permitted by law, SipSmart AI and its affiliates, officers, employees, agents, and service providers will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for lost profits, lost data, or loss of goodwill.",
+          "To the maximum extent permitted by law, our total liability for any claim related to the service will not exceed the greater of the amount you paid to use the service in the 12 months before the claim or USD $100.",
+        ],
+      },
+      {
+        id: "governing-law",
+        title: "14. Governing Law and Disputes",
+        paragraphs: [
+          "These Terms are governed by the laws of the state or country identified in SipSmart AI's final company legal notice, without regard to conflict-of-law rules. Add your final governing law, venue, arbitration, and class action waiver language before publishing.",
+        ],
+      },
+      {
+        id: "changes-contact",
+        title: "15. Changes and Contact",
+        paragraphs: [
+          "We may update these Terms from time to time. Continued use of SipSmart AI after updated Terms become effective means you accept the updated Terms.",
+          "Questions about these Terms can be sent to support@sipsmart.ai. Add your company legal name and mailing address here before publishing the final terms.",
+        ],
+      },
+    ],
+  },
+};
+
 function useRoute() {
-  const routeFromPath = () =>
-    window.location.pathname.replace(/\/+$/, "") === "/support" ? "support" : "home";
+  const routeFromPath = () => {
+    const path = window.location.pathname.replace(/\/+$/, "");
+    if (path === "/support") return "support";
+    if (path === "/privacy") return "privacy";
+    if (path === "/terms") return "terms";
+    return "home";
+  };
   const [route, setRoute] = useState(routeFromPath);
 
   useEffect(() => {
@@ -226,7 +471,8 @@ function useRoute() {
   }, []);
 
   const navigate = (nextRoute, hash = "") => {
-    const path = nextRoute === "support" ? "/support" : "/";
+    const paths = { home: "/", support: "/support", privacy: "/privacy", terms: "/terms" };
+    const path = paths[nextRoute] ?? "/";
     window.history.pushState({}, "", `${path}${hash}`);
     setRoute(nextRoute);
     requestAnimationFrame(() => {
@@ -244,13 +490,22 @@ function useRoute() {
 function App() {
   const [route, navigate] = useRoute();
 
+  useEffect(() => {
+    const titles = {
+      home: "SipSmart AI | Your AI Brain Buddy",
+      support: "Support | SipSmart AI",
+      privacy: "Privacy Notice | SipSmart AI",
+      terms: "Terms of Use | SipSmart AI",
+    };
+    document.title = titles[route] ?? titles.home;
+  }, [route]);
+
   return (
     <>
-      {route === "support" ? (
-        <SupportPage navigate={navigate} />
-      ) : (
-        <LandingPage navigate={navigate} />
-      )}
+      {route === "support" && <SupportPage navigate={navigate} />}
+      {route === "privacy" && <LegalPage doc={legalDocs.privacy} navigate={navigate} />}
+      {route === "terms" && <LegalPage doc={legalDocs.terms} navigate={navigate} />}
+      {route === "home" && <LandingPage navigate={navigate} />}
     </>
   );
 }
@@ -506,6 +761,12 @@ function SupportPage({ navigate }) {
             <button type="button" onClick={() => navigate("home")}>
               Home
             </button>
+            <button type="button" onClick={() => navigate("privacy")}>
+              Privacy
+            </button>
+            <button type="button" onClick={() => navigate("terms")}>
+              Terms
+            </button>
             <a href="#contact">Contact Support</a>
           </div>
         </nav>
@@ -604,6 +865,90 @@ function SupportPage({ navigate }) {
   );
 }
 
+function LegalPage({ doc, navigate }) {
+  const Icon = doc.icon;
+
+  return (
+    <div className="legal-shell">
+      <header className="support-header">
+        <nav>
+          <button className="support-brand link-button" type="button" onClick={() => navigate("home")}>
+            SipSmart <span>AI</span>
+          </button>
+          <div className="support-navlinks">
+            <button type="button" onClick={() => navigate("home")}>
+              Home
+            </button>
+            <button type="button" onClick={() => navigate("support")}>
+              Support
+            </button>
+            <button type="button" onClick={() => navigate("privacy")}>
+              Privacy
+            </button>
+            <button type="button" onClick={() => navigate("terms")}>
+              Terms
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section className="legal-hero">
+          <div className="legal-icon" aria-hidden="true">
+            <Icon size={30} />
+          </div>
+          <div className="eyebrow">{doc.eyebrow}</div>
+          <h1>{doc.title}</h1>
+          <p className="legal-date">{doc.date}</p>
+          <p>{doc.intro}</p>
+        </section>
+
+        <div className="legal-wrap">
+          <aside className="legal-toc">
+            <h2>On this page</h2>
+            <nav aria-label={`${doc.title} sections`}>
+              {doc.sections.map((section) => (
+                <a href={`#${section.id}`} key={section.id}>
+                  {section.title.replace(/^\d+\.\s*/, "")}
+                </a>
+              ))}
+            </nav>
+          </aside>
+
+          <article className="legal-content">
+            <div className="legal-summary">
+              <h2>Quick Summary</h2>
+              <ul>
+                {doc.summary.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+
+            {doc.sections.map((section) => (
+              <section className="legal-section" id={section.id} key={section.id}>
+                <h2>{section.title}</h2>
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+                {section.bullets ? (
+                  <ul>
+                    {section.bullets.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </section>
+            ))}
+          </article>
+        </div>
+      </main>
+
+      <Footer navigate={navigate} compact />
+    </div>
+  );
+}
+
 function Footer({ navigate, compact = false }) {
   return (
     <footer className={compact ? "footer compact" : "footer wrap"}>
@@ -613,8 +958,12 @@ function Footer({ navigate, compact = false }) {
           <button type="button" onClick={() => navigate("home")}>
             Home
           </button>
-          <a href="mailto:hello@sipsmart.ai?subject=Privacy%20Policy%20Request">Privacy</a>
-          <a href="mailto:hello@sipsmart.ai?subject=Terms%20of%20Service%20Request">Terms</a>
+          <button type="button" onClick={() => navigate("privacy")}>
+            Privacy
+          </button>
+          <button type="button" onClick={() => navigate("terms")}>
+            Terms
+          </button>
           <button type="button" onClick={() => navigate("support")}>
             Support
           </button>
